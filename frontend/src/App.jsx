@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 // Default API URLs (Primary 8001, Fallback 8000)
-const PRIMARY_API = 'http://127.0.0.1:8001';
-const FALLBACK_API = 'http://127.0.0.1:8000';
+const PRIMARY_API = 'https://mastiguard-api.onrender.com';
+const FALLBACK_API = 'https://mastiguard-api.onrender.com';
 const LOCAL_STORAGE_KEY = 'mastiguard_prediction_history';
 
 function App() {
