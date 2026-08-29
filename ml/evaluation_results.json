@@ -1,0 +1,113 @@
+{
+  "model_name": "Random Forest",
+  "dataset_name": "mastitis.csv",
+  "dataset_summary": {
+    "total_records": 966,
+    "healthy_records": 482,
+    "mastitis_records": 484,
+    "train_samples": 772,
+    "test_samples": 194
+  },
+  "metrics": {
+    "accuracy": 0.8041,
+    "accuracy_pct": "80.41%",
+    "precision": 0.7757,
+    "precision_pct": "77.57%",
+    "recall_sensitivity": 0.8557,
+    "recall_pct": "85.57%",
+    "specificity": 0.7526,
+    "specificity_pct": "75.26%",
+    "f1_score": 0.8137,
+    "roc_auc": 0.8863
+  },
+  "confusion_matrix": {
+    "true_negatives_tn": 73,
+    "false_positives_fp": 24,
+    "false_negatives_fn": 14,
+    "true_positives_tp": 83,
+    "matrix_array": [
+      [
+        73,
+        24
+      ],
+      [
+        14,
+        83
+      ]
+    ]
+  },
+  "top_features": [
+    {
+      "feature": "ED",
+      "importance": 0.2669796768228307,
+      "importance_pct": 26.7,
+      "description": "Cow Age in months (Parity & age progression factor in subclinical exposure)"
+    },
+    {
+      "feature": "DEL",
+      "importance": 0.21217390938761457,
+      "importance_pct": 21.22,
+      "description": "Days in Lactation (Stage of lactation cycle affecting immune susceptibility)"
+    },
+    {
+      "feature": "PL",
+      "importance": 0.19939718466818085,
+      "importance_pct": 19.94,
+      "description": "Daily Milk Yield in Liters/day (Drop in milk production caused by udder tissue inflammation)"
+    },
+    {
+      "feature": "CE",
+      "importance": 0.16302909759205775,
+      "importance_pct": 16.3,
+      "description": "Electrical Conductivity in mS/cm (Physiological biomarker of ionic changes in infected milk)"
+    },
+    {
+      "feature": "NP",
+      "importance": 0.10466797576633803,
+      "importance_pct": 10.47,
+      "description": "Parity / Number of Calvings (History of previous lactations)"
+    }
+  ],
+  "all_feature_importances": [
+    {
+      "feature": "ED",
+      "importance": 0.2669796768228307,
+      "importance_pct": 26.7,
+      "description": "Cow Age in months (Parity & age progression factor in subclinical exposure)"
+    },
+    {
+      "feature": "DEL",
+      "importance": 0.21217390938761457,
+      "importance_pct": 21.22,
+      "description": "Days in Lactation (Stage of lactation cycle affecting immune susceptibility)"
+    },
+    {
+      "feature": "PL",
+      "importance": 0.19939718466818085,
+      "importance_pct": 19.94,
+      "description": "Daily Milk Yield in Liters/day (Drop in milk production caused by udder tissue inflammation)"
+    },
+    {
+      "feature": "CE",
+      "importance": 0.16302909759205775,
+      "importance_pct": 16.3,
+      "description": "Electrical Conductivity in mS/cm (Physiological biomarker of ionic changes in infected milk)"
+    },
+    {
+      "feature": "NP",
+      "importance": 0.10466797576633803,
+      "importance_pct": 10.47,
+      "description": "Parity / Number of Calvings (History of previous lactations)"
+    },
+    {
+      "feature": "Estado",
+      "importance": 0.053752155762978156,
+      "importance_pct": 5.38
+    }
+  ],
+  "explanations": {
+    "feature_importance_disclaimer": "Feature importance indicates which input variables contributed most to the Random Forest model's decisions. It does not imply medical causation.",
+    "diagnostic_disclaimer": "This software prototype is intended for AI research and screening support. It does NOT constitute a clinical veterinary diagnosis.",
+    "forecasting_disclosure": "Dataset contains cross-sectional/sampling records across milkings. 7-14 day forecasting is supported as subclinical screening guidance, not deterministic longitudinal proof."
+  }
+}
