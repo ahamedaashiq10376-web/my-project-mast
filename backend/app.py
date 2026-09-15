@@ -9,6 +9,7 @@ import os
 import sys
 import json
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 import pandas as pd
 import joblib
 from fastapi import FastAPI, HTTPException
@@ -206,7 +207,7 @@ def predict_mastitis(request: CowPredictionRequest):
             "features_used": result["features_used"],
             "input_parameters": input_params,
             "created_at": created_at_iso,
-            "timestamp": datetime.now().strftime("%b %d, %Y, %I:%M %p")
+            "timestamp": datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%b %d, %Y, %I:%M %p")
         }
 
         saved_to_db = False
