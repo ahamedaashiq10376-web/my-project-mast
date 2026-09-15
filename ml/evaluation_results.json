@@ -18,7 +18,23 @@
     "specificity": 0.7526,
     "specificity_pct": "75.26%",
     "f1_score": 0.8137,
-    "roc_auc": 0.8863
+    "roc_auc": 0.8863,
+    "confusion_matrix": {
+      "true_negatives_tn": 73,
+      "false_positives_fp": 24,
+      "false_negatives_fn": 14,
+      "true_positives_tp": 83,
+      "matrix_array": [
+        [
+          73,
+          24
+        ],
+        [
+          14,
+          83
+        ]
+      ]
+    }
   },
   "confusion_matrix": {
     "true_negatives_tn": 73,
@@ -39,72 +55,195 @@
   "top_features": [
     {
       "feature": "ED",
-      "importance": 0.2669796768228307,
+      "importance": 0.267,
       "importance_pct": 26.7,
       "description": "Cow Age in months (Parity & age progression factor in subclinical exposure)"
     },
     {
       "feature": "DEL",
-      "importance": 0.21217390938761457,
+      "importance": 0.2122,
       "importance_pct": 21.22,
       "description": "Days in Lactation (Stage of lactation cycle affecting immune susceptibility)"
     },
     {
       "feature": "PL",
-      "importance": 0.19939718466818085,
+      "importance": 0.1994,
       "importance_pct": 19.94,
       "description": "Daily Milk Yield in Liters/day (Drop in milk production caused by udder tissue inflammation)"
     },
     {
       "feature": "CE",
-      "importance": 0.16302909759205775,
+      "importance": 0.163,
       "importance_pct": 16.3,
       "description": "Electrical Conductivity in mS/cm (Physiological biomarker of ionic changes in infected milk)"
     },
     {
       "feature": "NP",
-      "importance": 0.10466797576633803,
-      "importance_pct": 10.47,
-      "description": "Parity / Number of Calvings (History of previous lactations)"
-    }
-  ],
-  "all_feature_importances": [
-    {
-      "feature": "ED",
-      "importance": 0.2669796768228307,
-      "importance_pct": 26.7,
-      "description": "Cow Age in months (Parity & age progression factor in subclinical exposure)"
-    },
-    {
-      "feature": "DEL",
-      "importance": 0.21217390938761457,
-      "importance_pct": 21.22,
-      "description": "Days in Lactation (Stage of lactation cycle affecting immune susceptibility)"
-    },
-    {
-      "feature": "PL",
-      "importance": 0.19939718466818085,
-      "importance_pct": 19.94,
-      "description": "Daily Milk Yield in Liters/day (Drop in milk production caused by udder tissue inflammation)"
-    },
-    {
-      "feature": "CE",
-      "importance": 0.16302909759205775,
-      "importance_pct": 16.3,
-      "description": "Electrical Conductivity in mS/cm (Physiological biomarker of ionic changes in infected milk)"
-    },
-    {
-      "feature": "NP",
-      "importance": 0.10466797576633803,
+      "importance": 0.1047,
       "importance_pct": 10.47,
       "description": "Parity / Number of Calvings (History of previous lactations)"
     },
     {
       "feature": "Estado",
-      "importance": 0.053752155762978156,
-      "importance_pct": 5.38
+      "importance": 0.0538,
+      "importance_pct": 5.38,
+      "description": "Reproductive Status (Gestante, Abierta, Inseminada, No gestante, Est\u00e9ril)"
     }
   ],
+  "all_models_eval": {
+    "Random Forest": {
+      "accuracy": 0.8041,
+      "accuracy_pct": "80.41%",
+      "precision": 0.7757,
+      "precision_pct": "77.57%",
+      "recall_sensitivity": 0.8557,
+      "recall_pct": "85.57%",
+      "specificity": 0.7526,
+      "specificity_pct": "75.26%",
+      "f1_score": 0.8137,
+      "roc_auc": 0.8863,
+      "confusion_matrix": {
+        "true_negatives_tn": 73,
+        "false_positives_fp": 24,
+        "false_negatives_fn": 14,
+        "true_positives_tp": 83,
+        "matrix_array": [
+          [
+            73,
+            24
+          ],
+          [
+            14,
+            83
+          ]
+        ]
+      }
+    },
+    "Gradient Boosting": {
+      "accuracy": 0.7835,
+      "accuracy_pct": "78.35%",
+      "precision": 0.757,
+      "precision_pct": "75.70%",
+      "recall_sensitivity": 0.8351,
+      "recall_pct": "83.51%",
+      "specificity": 0.732,
+      "specificity_pct": "73.20%",
+      "f1_score": 0.7941,
+      "roc_auc": 0.8635,
+      "confusion_matrix": {
+        "true_negatives_tn": 71,
+        "false_positives_fp": 26,
+        "false_negatives_fn": 16,
+        "true_positives_tp": 81,
+        "matrix_array": [
+          [
+            71,
+            26
+          ],
+          [
+            16,
+            81
+          ]
+        ]
+      }
+    },
+    "Logistic Regression": {
+      "accuracy": 0.732,
+      "accuracy_pct": "73.20%",
+      "precision": 0.7368,
+      "precision_pct": "73.68%",
+      "recall_sensitivity": 0.7216,
+      "recall_pct": "72.16%",
+      "specificity": 0.7423,
+      "specificity_pct": "74.23%",
+      "f1_score": 0.7292,
+      "roc_auc": 0.7833,
+      "confusion_matrix": {
+        "true_negatives_tn": 72,
+        "false_positives_fp": 25,
+        "false_negatives_fn": 27,
+        "true_positives_tp": 70,
+        "matrix_array": [
+          [
+            72,
+            25
+          ],
+          [
+            27,
+            70
+          ]
+        ]
+      }
+    },
+    "Support Vector Machine": {
+      "accuracy": 0.7577,
+      "accuracy_pct": "75.77%",
+      "precision": 0.7404,
+      "precision_pct": "74.04%",
+      "recall_sensitivity": 0.7938,
+      "recall_pct": "79.38%",
+      "specificity": 0.7216,
+      "specificity_pct": "72.16%",
+      "f1_score": 0.7662,
+      "roc_auc": 0.8262,
+      "confusion_matrix": {
+        "true_negatives_tn": 70,
+        "false_positives_fp": 27,
+        "false_negatives_fn": 20,
+        "true_positives_tp": 77,
+        "matrix_array": [
+          [
+            70,
+            27
+          ],
+          [
+            20,
+            77
+          ]
+        ]
+      }
+    }
+  },
+  "audit_summary": {
+    "total_rows": 966,
+    "total_columns": 17,
+    "clean_rows": 966,
+    "target_column": "Resultado",
+    "target_class_distribution": {
+      "0 (Healthy)": 482,
+      "1 (Mastitis)": 484
+    },
+    "missing_values": {
+      "ID_muestra": 0,
+      "N_Vaca": 0,
+      "Muestreo": 0,
+      "ED": 0,
+      "DEL": 0,
+      "Estado": 0,
+      "NP": 0,
+      "PL": 0,
+      "CE": 0,
+      "Resultado": 0
+    },
+    "duplicate_rows": 0,
+    "feature_columns_used": [
+      "ED",
+      "DEL",
+      "Estado",
+      "NP",
+      "PL",
+      "CE"
+    ],
+    "excluded_columns": {
+      "ID_muestra": "Non-predictive sample identifier",
+      "N_Vaca": "Non-predictive cow tag identifier",
+      "Muestreo": "Non-predictive sampling sequence number",
+      "Estado_n": "Redundant numerical encoding of Estado",
+      "CCS": "Cell Count Score (Direct log transformation of SCC / target leakage risk)",
+      "SCCS": "Standardized Somatic Cell Count Score (Derived label metric / target leakage risk)",
+      "Unnamed 13-16": "Trailing empty CSV export columns"
+    }
+  },
   "explanations": {
     "feature_importance_disclaimer": "Feature importance indicates which input variables contributed most to the Random Forest model's decisions. It does not imply medical causation.",
     "diagnostic_disclaimer": "This software prototype is intended for AI research and screening support. It does NOT constitute a clinical veterinary diagnosis.",

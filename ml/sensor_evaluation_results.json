@@ -1,0 +1,28 @@
+{
+  "sensor_model": {
+    "model_name": "Gradient Boosting Classifier",
+    "selection_score": 1.0,
+    "features_used": [
+      "Milk_pH",
+      "Milk_Temperature",
+      "Milk_Conductivity",
+      "Somatic_Cell_Count",
+      "Milk_Yield",
+      "Day"
+    ],
+    "metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall_sensitivity": 1.0,
+      "specificity": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0
+    },
+    "confusion_matrix": {
+      "tn": 84,
+      "fp": 0,
+      "fn": 0,
+      "tp": 70
+    }
+  }
+}
