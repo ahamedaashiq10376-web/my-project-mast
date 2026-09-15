@@ -39,7 +39,7 @@ export default function App() {
 
   const fetchHistory = async () => {
     try {
-      const res = await fetch('http://127.0.0.1:8001/predictions');
+      const res = await fetch('https://mastiguard-api.onrender.com/predictions');
       if (res.ok) {
         const data = await res.json();
         setHistory(data);
@@ -198,7 +198,7 @@ export default function App() {
     console.log("Submitting Prediction Payload (Exact JSON sent):", JSON.stringify(payload, null, 2));
 
     try {
-      const res = await fetch('http://127.0.0.1:8001/predict', {
+      const res = await fetch('https://mastiguard-api.onrender.com/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -232,7 +232,7 @@ export default function App() {
       }
     } catch (err) {
       console.error("Prediction network error:", err);
-      alert("API Connection Error: Unable to connect to backend server at http://127.0.0.1:8001. Please check if FastAPI backend server (backend/app.py) is running.");
+      alert("API Connection Error: Unable to connect to MastiGuard AI backend. Please try again.");
     } finally {
       setAnalyzing(false);
     }
